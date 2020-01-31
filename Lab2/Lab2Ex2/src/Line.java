@@ -5,10 +5,13 @@ class Line {
 	private static int classID = 0;
 	private int objID;
 
+	/*
+	 * Default constructor, makes a line from two points, where each point is the end of the line.
+	 */
 	public Line(Point a, Point b) {
-	start = a;
-	end = b; 
-	 objID = ++ classID;
+		start = a;
+		end = b; 
+		objID = ++ classID;
 	}
 	
    
