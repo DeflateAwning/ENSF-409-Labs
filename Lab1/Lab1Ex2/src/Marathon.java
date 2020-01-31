@@ -3,7 +3,7 @@ public class Marathon {
 	
 	public int getArrayMinValueIndex(int[] inputArray) {
 		int currentMinValue = inputArray[0];
-		int currentMinIndex = -1;
+		int currentMinIndex = 0;
 		
 		for (int i = 0; i < inputArray.length; i++) {
 			if (inputArray[i] < currentMinValue) {
