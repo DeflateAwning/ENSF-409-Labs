@@ -1,0 +1,123 @@
+
+Please enter the name of the 'X' player: XPlayerName
+
+Please enter the name of the 'O' player: OPlayerName
+Referee started the game...
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayerName, enter the row to place 'X' mark in: 0
+XPlayerName, enter the column to place 'X' mark in: 0
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+OPlayerName, enter the row to place 'O' mark in: 1
+OPlayerName, enter the column to place 'O' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayerName, enter the row to place 'X' mark in: 2
+2XPlayerName, enter the column to place 'X' mark in: 
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+OPlayerName, enter the row to place 'O' mark in: 0
+OPlayerName, enter the column to place 'O' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayerName, enter the row to place 'X' mark in: 0
+XPlayerName, enter the column to place 'X' mark in: 2
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+OPlayerName, enter the row to place 'O' mark in: 2
+OPlayerName, enter the column to place 'O' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+The game is now over: Player 'O' (OPlayerName) wins the game!

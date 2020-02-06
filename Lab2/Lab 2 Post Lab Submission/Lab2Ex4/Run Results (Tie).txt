@@ -1,0 +1,174 @@
+
+Please enter the name of the 'X' player: XPlayer
+
+Please enter the name of the 'O' player: YPlayer
+Referee started the game...
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayer, enter the row to place 'X' mark in: 0
+XPlayer, enter the column to place 'X' mark in: 0
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+YPlayer, enter the row to place 'O' mark in: 1
+YPlayer, enter the column to place 'O' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayer, enter the row to place 'X' mark in: 2
+XPlayer, enter the column to place 'X' mark in: 2
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+YPlayer, enter the row to place 'O' mark in: 0
+YPlayer, enter the column to place 'O' mark in: 2
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |     |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayer, enter the row to place 'X' mark in: 2
+XPlayer, enter the column to place 'X' mark in: 0
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |     |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |  X  |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+YPlayer, enter the row to place 'O' mark in: 1
+YPlayer, enter the column to place 'O' mark in: 0
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |  O  |  O  |     |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |  X  |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayer, enter the row to place 'X' mark in: 1
+2XPlayer, enter the column to place 'X' mark in: 
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |  O  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |  X  |     |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+YPlayer, enter the row to place 'O' mark in: 2
+YPlayer, enter the column to place 'O' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |     |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |  O  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |  X  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+XPlayer, enter the row to place 'X' mark in: 0
+XPlayer, enter the column to place 'X' mark in: 1
+
+          |col 0|col 1|col 2
+          +-----+-----+-----+
+          |     |     |     |
+    row 0 |  X  |  X  |  O  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 1 |  O  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+          |     |     |     |
+    row 2 |  X  |  O  |  X  |
+          |     |     |     |
+          +-----+-----+-----+
+The game is now over: The game ended in a tie.
