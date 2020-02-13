@@ -19,6 +19,18 @@ public class Shop {
 	 */
 	private SupplierList supplierList;
 	
+
+	/**
+	 * The constructor for the Shop, which loads in an Inventory and a SupplierList, based on data from files (for example).
+	 * 
+	 * @param inventory The inventory to set for the shop
+	 * @param supplierList The supplier list to set for the shop
+	 */
+	public Shop(Inventory inventory, SupplierList supplierList) {
+		setInventory(inventory);
+		setSupplierList(supplierList);
+	}
+	
 	/**
 	 * Sets the Inventory.
 	 * 
@@ -27,6 +39,7 @@ public class Shop {
 	public void setInventory(Inventory inventory) {
 		this.inventory = inventory;
 	}
+	
 
 	/**
 	 * Sets the SupplierList.

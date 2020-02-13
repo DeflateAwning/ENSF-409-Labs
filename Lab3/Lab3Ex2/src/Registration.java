@@ -1,4 +1,7 @@
 
+/**
+ * Represents a single student being enrolled in a single course.
+ */
 public class Registration {
 	private Student theStudent;
 	private CourseOffering theOffering;

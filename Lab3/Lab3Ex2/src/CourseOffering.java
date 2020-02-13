@@ -3,6 +3,10 @@ import java.util.ArrayList;
 public class CourseOffering {
 	
 	private int secNum;
+	
+	/**
+	 * Assume the secCap is the maximum number of students in the registration.
+	 */
 	private int secCap;
 	private Course theCourse;
 	//private ArrayList<Student> studentList;
@@ -39,8 +43,13 @@ public class CourseOffering {
 		//We also want to print the names of all students in the section
 		return st;
 	}
+	
+	/**
+	 * Adds a registration (linking of Student and CourseOffering) to the list of students enrolled in this CourseOffering.
+	 * 
+	 * @param registration
+	 */
 	public void addRegistration(Registration registration) {
-		// TODO Auto-generated method stub
 		offeringRegList.add(registration);
 		
 	}

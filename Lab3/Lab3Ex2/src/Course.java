@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Represents a single course. Stores the name of the course, and a list of the offerings, as well as a list of prereqs.
+ */
 public class Course {
 
 	private String courseName;
@@ -10,6 +13,7 @@ public class Course {
 	public Course(String courseName, int courseNum) {
 		this.setCourseName(courseName);
 		this.setCourseNum(courseNum);
+		
 		// Both of the following are only association
 		preReq = new ArrayList<Course>();
 		offeringList = new ArrayList<CourseOffering>();
@@ -43,6 +47,7 @@ public class Course {
 	public void setCourseNum(int courseNum) {
 		this.courseNum = courseNum;
 	}
+	
 	@Override
 	public String toString () {
 		String st = "\n";
@@ -55,7 +60,6 @@ public class Course {
 	}
 
 	public CourseOffering getCourseOfferingAt(int i) {
-		// TODO Auto-generated method stub
 		if (i < 0 || i >= offeringList.size() )
 			return null;
 		else

@@ -55,5 +55,14 @@ public class CourseCatalogue {
 		}
 		return st;
 	}
+	
+	/**
+	 * Prints out the Course Catalogue. Called from main menu.
+	 */
+	public void printCourseCatalogue() {
+		System.out.println("Full Course Catalogue:");
+		System.out.println(this.toString());
+		System.out.println("END COURSE CATALOGUE");
+	}
 
 }
