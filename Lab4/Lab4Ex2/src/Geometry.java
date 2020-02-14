@@ -2,6 +2,14 @@
 import java.util.Iterator;
 import java.util.TreeSet;
 
+
+/**
+ * Main Class for the project, that creates all the shapes and everything else.
+ * 
+ * @author P. Link
+ * @version 1.0.1
+ * @since Feb. 14, 2020
+ */
 public class Geometry{
 	private TreeSet <Shape> shapes;
 	
