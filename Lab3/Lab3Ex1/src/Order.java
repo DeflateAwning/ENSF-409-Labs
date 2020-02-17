@@ -56,7 +56,7 @@ public class Order {
 		out += "ORDER ID: \t\t\t" + orderID + "\n";
 		
 		// Source: https://www.javatpoint.com/java-get-current-date
-		out += "Date Ordered: \t\t\t" + DateTimeFormatter.ofPattern("Month dd, yyyy").format(LocalDateTime.now()) + "\n";
+		out += "Date Ordered: \t\t\t" + DateTimeFormatter.ofPattern("MMM dd, yyyy").format(LocalDateTime.now()) + "\n";
 		out += "\n";
 		
 		// Add Body (each order)
@@ -64,6 +64,8 @@ public class Order {
 			out += orderLines.get(i);
 			out += "\n";
 		}
+		
+		out += SECTION_DIVIDER + "\n";
 		
 		return out;
 	}

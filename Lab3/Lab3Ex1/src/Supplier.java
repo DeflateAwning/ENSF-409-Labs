@@ -88,6 +88,15 @@ public class Supplier {
 		return itemList;
 	}
 	
+	/**
+	 * Adds an item to the itemList
+	 * 
+	 * @param item The item to add
+	 */
+	public void addItem(Item item) {
+		itemList.add(item);
+	}
+	
 
 
 	/**

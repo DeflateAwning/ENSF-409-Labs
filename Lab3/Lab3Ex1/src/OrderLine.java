@@ -49,7 +49,7 @@ public class OrderLine {
 	@Override
 	public String toString() {
 		String out = "";
-		out += "Item Description:\t\t\t" + item.getName() + "\n";
+		out += "Item Description:\t\t" + item.getName() + "\n";
 		out += "Amount Ordered:\t\t\t" + (orderQuantity - item.getQuantity()) + " units\n";
 		out += "Supplier:\t\t\t" + item.getSupplier().getName() + "\n";
 		

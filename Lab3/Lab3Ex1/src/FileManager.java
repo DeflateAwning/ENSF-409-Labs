@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 public class FileManager {
 	
-	private String pathToItemsFile = "items.txt";
-	private String pathToSuppliersFile = "suppliers.txt";
+	private final String pathToItemsFile = System.getProperty("user.dir") + "\\items.txt";
+	private final String pathToSuppliersFile = System.getProperty("user.dir") + "\\suppliers.txt";
 	
 	/**
 	 * Holds the list of suppliers, specifically for looking up the suppliers in readItems().
@@ -54,13 +54,14 @@ public class FileManager {
 				Supplier thisSupplier = findSupplier(supplierID);
 				if (thisSupplier != null) {
 					// Valid Supplier Found, create an item
-					Item thisItem = new Item(Integer.parseInt(lineParts[0]), lineParts[1], Integer.parseInt(lineParts[2]), Float.parseFloat(lineParts[3]), thisSupplier);
+					Item thisItem = new Item(Integer.parseInt(lineParts[0]), lineParts[1], Integer.parseInt(lineParts[2]), Double.parseDouble(lineParts[3]), thisSupplier);
 					
 					// Add the newly created item to the item list
 					items.add(thisItem);
 					
 					// Log this item in the supplier's list of items
-					thisSupplier.getItemList().add(thisItem);
+					//thisSupplier.getItemList().add(thisItem);
+					//thisSupplier.addItem(thisItem);
 				}
 				else {
 					// Invalid supplier ID found in item list
@@ -74,8 +75,12 @@ public class FileManager {
 		}
 		
 		catch (Exception e) {
-			System.err.println("Error loading the items.txt file: ");
-			System.err.println(e.getMessage());
+			System.err.print("Error loading the items.txt file: ");
+			System.err.println(e.getStackTrace()[e.getStackTrace().length-3]);
+
+			// Print path to put the items.txt file in
+			System.err.println("Ensure that items.txt is in: " + pathToItemsFile);
+			
 		}
 		
 		
@@ -143,8 +148,11 @@ public class FileManager {
 		}
 		
 		catch (Exception e) {
-			System.err.println("Error loading the suppliers.txt file: ");
+			System.err.print("Error loading the suppliers.txt file: ");
 			System.err.println(e.getMessage());
+
+			// Print path to put the suppliers.txt file in
+			System.err.println("Ensure that suppliers.txt is in: " + pathToSuppliersFile);
 		}
 		
 		return suppliers;

@@ -30,7 +30,7 @@ public class Item {
 	/**
 	 * Represents the price of the Item
 	 */
-	private float price;
+	private double price;
 
 	/**
 	 * Represents the Supplier of the Item
@@ -60,7 +60,7 @@ public class Item {
 	 * @param price The current price of the item
 	 * @param supplierID The supplier ID of the item (linked to a supplier)
 	 */
-	public Item(int id, String name, int quantity, float price, Supplier supplier) {
+	public Item(int id, String name, int quantity, double price, Supplier supplier) {
 		setAllInfo(id, name, quantity, price, supplier);
 	}
 	
@@ -73,7 +73,7 @@ public class Item {
 	 * @param price The current price of the item
 	 * @param supplierID The supplier ID of the item (linked to a supplier)
 	 */
-	public void setAllInfo(int id, String name, int quantity, float price, Supplier supplier) {
+	public void setAllInfo(int id, String name, int quantity, double price, Supplier supplier) {
 		this.id = id;
 		this.name = name;
 		this.quantity = quantity;
@@ -161,7 +161,7 @@ public class Item {
 	public String toString() {
 		String out = "";
 		
-		out += "Item ID:" + id;
+		out += "Item ID: " + id;
 		out += ", Item Name: " + name;
 		out += ", Item Quantity: " + quantity;
 		out += ", Item Price: " + price;

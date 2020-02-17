@@ -88,20 +88,6 @@ public class Inventory {
 		}
 	}
 	
-	/**
-	 * Gets an item by its name or ID.
-	 * 
-	 * @param name The item's name.
-	 * @return The Item object.
-	 */
-	public Item searchForItem(String name) {
-		for (int i = 0; i < items.size(); i++) {
-			if (items.get(i).getName() == name) {
-				return items.get(i);
-			}
-		}
-		return null;
-	}
 	
 
 	/**
@@ -112,7 +98,7 @@ public class Inventory {
 	}
 
 	/**
-	 * Gets an item by its name or ID.
+	 * Gets an item by its ID (or name).
 	 * 
 	 * @param id The item's ID.
 	 * @return The Item object.
@@ -122,6 +108,24 @@ public class Inventory {
 			if (items.get(i).getID() == id) {
 				return items.get(i);
 			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Gets an item by its name (or ID).
+	 * 
+	 * @param name The item's name.
+	 * @return The Item object.
+	 */
+	public Item searchForItem(String name) {
+		for (int i = 0; i < items.size(); i++) {
+			if (items.get(i).getName().equals(name)) {
+				return items.get(i);
+			}
+			
+			// Debugging for when name matches weren't working
+			//System.out.println("Search Name: '" + name + "', cur name in loop: '" + items.get(i).getName() + "'");
 		}
 		return null;
 	}
@@ -142,28 +146,7 @@ public class Inventory {
 	 */
 	public ArrayList<Item> getItems() {
 		return items;
-	}
-	
-	/**
-	 * Gets an Item by its ID.
-	 * 
-	 * @param id The Item's ID
-	 * @return The Item
-	 */
-	public Item getItem(int id) {
-		return searchForItem(id);
-	}
-	
-	/**
-	 * Gets an Item by its name.
-	 * 
-	 * @param name The Item's name
-	 * @return The Item
-	 */
-	public Item getItem(String name) {
-		return searchForItem(name);
-	}
-	
+	}	
 
 	/**
 	 * Lists all the items in this inventory.
@@ -175,6 +158,7 @@ public class Inventory {
 		
 		for (int i = 0; i < items.size(); i++) {
 			out += items.get(i);
+			out += "\n";
 		}
 		
 		return out;

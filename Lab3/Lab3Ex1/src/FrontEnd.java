@@ -64,7 +64,7 @@ public class FrontEnd {
 			// Consider the user's input with all different choices
 			switch (choice) {
 			case 1: // List All Tools
-				shop.listAllItems();
+				listAllItems();
 				break;
 				
 			case 2: // Search for tool by Tool Name
@@ -110,7 +110,7 @@ public class FrontEnd {
 	 */
 	private void decreaseItem() {
 		String itemName = promptItemName();
-		if (shop.decreaseQuantity(itemName)) {
+		if (shop.manageItem(itemName) != null) {
 			System.out.println("Item Quantity decreased successfully.");
 		}
 		else {
@@ -118,6 +118,12 @@ public class FrontEnd {
 		}
 	}
 	
+	/**
+	 * Prints the list of all items in the shop's inventory.
+	 */
+	private void listAllItems() {
+		System.out.println(shop.listAllItems());
+	}
 
 	/**
 	 * Checks the quantity of an item, simulating a sale. Gets the item name from a prompt.
@@ -133,7 +139,7 @@ public class FrontEnd {
 	private String promptItemName() {
 		System.out.print("Please enter the name of the item: ");
 		
-		return scan.nextLine();
+		return scan.nextLine().trim();
 	}
 	
 	/**
@@ -165,8 +171,9 @@ public class FrontEnd {
 	 * @param args Command Line Arguments
 	 */
 	public static void main(String[] args) {
-		FrontEnd frontEnd = new FrontEnd();
 		
+		// Create and start the main part
+		FrontEnd frontEnd = new FrontEnd();
 		frontEnd.menu();
 
 	}

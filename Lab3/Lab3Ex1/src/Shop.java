@@ -77,6 +77,16 @@ public class Shop {
 	public boolean decreaseQuantity(String itemName) {
 		return inventory.decreaseQuantity(itemName);
 	}
+	
+	/**
+	 * Decreases an item's quantity, and adds to an order if necessary
+	 * 
+	 * @param name The name of the item to decrease the quantity of.
+	 * @return The Item
+	 */
+	public Item manageItem(String name) {
+		return inventory.manageItem(name);
+	}
 
 	/**
 	 * Gets an Item by its ID.
@@ -85,7 +95,7 @@ public class Shop {
 	 * @return The Item
 	 */
 	public Item getItem(int id) {
-		return inventory.getItem(id);
+		return inventory.searchForItem(id);
 	}
 	
 	/**
@@ -95,7 +105,7 @@ public class Shop {
 	 * @return The Item
 	 */
 	public Item getItem(String name) {
-		return inventory.getItem(name);
+		return inventory.searchForItem(name);
 	}
 
 	/**
