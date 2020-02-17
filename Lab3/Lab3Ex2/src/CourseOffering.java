@@ -54,6 +54,17 @@ public class CourseOffering {
 		
 	}
 	
+	public Registration getCourseRegistrationAt(int i) {
+		if (i < 0 || i >= offeringRegList.size() )
+			return null;
+		else
+			return offeringRegList.get(i);
+	}
+	
+	public ArrayList<Registration> getCourseRegistrationList() {
+		return offeringRegList;
+	}
+	
 	
 
 }

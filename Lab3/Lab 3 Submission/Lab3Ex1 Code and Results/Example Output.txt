@@ -1,0 +1,158 @@
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 1
+Item ID: 1000, Item Name: Knock Bits, Item Quantity: 88, Item Price: 12.67
+Item ID: 1001, Item Name: Widgets, Item Quantity: 5, Item Price: 35.5
+Item ID: 1002, Item Name: Grommets, Item Quantity: 20, Item Price: 23.45
+Item ID: 1003, Item Name: Wedges, Item Quantity: 15, Item Price: 10.15
+Item ID: 1004, Item Name: Wing Bats, Item Quantity: 11, Item Price: 11.25
+Item ID: 1005, Item Name: Twinkies, Item Quantity: 75, Item Price: 15.75
+Item ID: 1006, Item Name: Wiggles, Item Quantity: 30, Item Price: 12.34
+Item ID: 1007, Item Name: Bing Bobs, Item Quantity: 25, Item Price: 2.39
+Item ID: 1008, Item Name: Wog Wits, Item Quantity: 300, Item Price: 19.99
+Item ID: 1009, Item Name: Barney Bits, Item Quantity: 21, Item Price: 23.59
+Item ID: 1010, Item Name: Willie Widgits, Item Quantity: 89, Item Price: 12.99
+Item ID: 1011, Item Name: Barge Bogs, Item Quantity: 35, Item Price: 2.99
+Item ID: 1012, Item Name: Poggy Pogs, Item Quantity: 99, Item Price: 1.1
+Item ID: 1013, Item Name: Pardle Pins, Item Quantity: 400, Item Price: 0.69
+Item ID: 1014, Item Name: Piddley Wicks, Item Quantity: 54, Item Price: 5.19
+Item ID: 1015, Item Name: Iggy Orks, Item Quantity: 22, Item Price: 49.95
+Item ID: 1016, Item Name: Crank Cribs, Item Quantity: 888, Item Price: 0.29
+Item ID: 1017, Item Name: Thingies, Item Quantity: 67, Item Price: 45.98
+Item ID: 1018, Item Name: Orf Dappers, Item Quantity: 32, Item Price: 19.98
+Item ID: 1019, Item Name: Piff Knocks, Item Quantity: 82, Item Price: 4.95
+Item ID: 1020, Item Name: Knit Piks, Item Quantity: 66, Item Price: 6.75
+Item ID: 1021, Item Name: Piddley Pins, Item Quantity: 370, Item Price: 0.25
+Item ID: 1022, Item Name: Tic Tocs, Item Quantity: 87, Item Price: 1.36
+Item ID: 1023, Item Name: Tin Wits, Item Quantity: 23, Item Price: 5.67
+Item ID: 1024, Item Name: Thinga-ma-bobs, Item Quantity: 40, Item Price: 10.98
+Item ID: 1025, Item Name: Fling Flobs, Item Quantity: 254, Item Price: 2.33
+Item ID: 1026, Item Name: Barn Bins, Item Quantity: 45, Item Price: 88.67
+Item ID: 1027, Item Name: Flap Wrappers, Item Quantity: 89, Item Price: 44.88
+Item ID: 1028, Item Name: Pong Pangs, Item Quantity: 2345, Item Price: 0.1
+Item ID: 1029, Item Name: Oof Tongs, Item Quantity: 345, Item Price: 8.49
+Item ID: 1030, Item Name: Nic Nacs, Item Quantity: 238, Item Price: 2.99
+Item ID: 1031, Item Name: Tork Tins, Item Quantity: 376, Item Price: 0.95
+Item ID: 1032, Item Name: Lilly Larks, Item Quantity: 56, Item Price: 12.99
+Item ID: 1033, Item Name: Minnie Morks, Item Quantity: 800, Item Price: 1.95
+Item ID: 1034, Item Name: Cork Handles, Item Quantity: 654, Item Price: 2.66
+Item ID: 1035, Item Name: Ding Darns, Item Quantity: 1208, Item Price: 0.15
+Item ID: 1036, Item Name: Erk Orks, Item Quantity: 498, Item Price: 3.99
+Item ID: 1037, Item Name: Foo Figs, Item Quantity: 234, Item Price: 5.89
+Item ID: 1038, Item Name: Googly Eyes, Item Quantity: 756, Item Price: 6.99
+Item ID: 1039, Item Name: Handy Pandies, Item Quantity: 321, Item Price: 4.35
+Item ID: 1040, Item Name: Inny Outies, Item Quantity: 219, Item Price: 3.45
+
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 2
+Please enter the name of the item: Widgets
+Item ID: 1001, Item Name: Widgets, Item Quantity: 5, Item Price: 35.5
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 3
+Please enter the ID of the item: 1006
+Item ID: 1006, Item Name: Wiggles, Item Quantity: 30, Item Price: 12.34
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 4
+Please enter the name of the item: Widgets
+5
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 5
+Please enter the name of the item: Widgets
+Item Quantity decreased successfully.
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 6
+**********************************************************************
+ORDER ID: 			95702
+Date Ordered: 			Feb 16, 2020
+
+Item Description:		Widgets
+Amount Ordered:			46 units
+Supplier:			Winork Manufacturing Inc.
+
+**********************************************************************
+
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 5
+Please enter the name of the item: Bing Bobs
+Item Quantity decreased successfully.
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 6
+**********************************************************************
+ORDER ID: 			95702
+Date Ordered: 			Feb 16, 2020
+
+Item Description:		Widgets
+Amount Ordered:			46 units
+Supplier:			Winork Manufacturing Inc.
+
+Item Description:		Bing Bobs
+Amount Ordered:			26 units
+Supplier:			Grab Bag Inc.
+
+**********************************************************************
+
+Select an option: 
+	1. List All Tools
+	2. Search for tool by Tool Name
+	3. Search for tool by Tool ID
+	4. Check Item Quantity
+	5. Decrease Item Quantity
+	6. Print Today's Order
+	7. Quit
+Select Option: 7
+Quitting.

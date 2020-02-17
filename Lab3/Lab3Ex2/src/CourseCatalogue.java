@@ -9,9 +9,9 @@ public class CourseCatalogue {
 	}
 	
 	private void loadFromDataBase() {
-		// TODO Auto-generated method stub
 		DBManager db = new DBManager();
 		setCourseList(db.readFromDataBase());
+		db.addSomeStudents(this); // add some students and registrations
 		
 	}
 	public void createCourseOffering (Course c, int secNum, int secCap) {
@@ -34,7 +34,6 @@ public class CourseCatalogue {
 	//are private and are not exposed for use by other classes.
 	//These methods are refereed to as helper methods or utility methods
 	private void displayCourseNotFoundError() {
-		// TODO Auto-generated method stub
 		System.err.println("Course was not found!");
 		
 	}
@@ -63,6 +62,62 @@ public class CourseCatalogue {
 		System.out.println("Full Course Catalogue:");
 		System.out.println(this.toString());
 		System.out.println("END COURSE CATALOGUE");
+	}
+	
+	/**
+	 * Filters courses by student being enrolled
+	 */
+	public String getCoursesByStudent(String studentName) {
+		String out = "";
+		
+		
+		for (Course course : courseList) {
+			Student stud;
+			
+			for (CourseOffering off : course.getCourseOfferingList()) {
+				for (Registration reg : off.getCourseRegistrationList()) {
+					stud = reg.getTheStudent();
+					
+					if (stud != null) {
+						stud = reg.getTheStudent();
+						
+						if (stud.getStudentName().contentEquals(studentName)) {
+							// This student is a student being filtered for
+							out += reg.toString();
+							out += "\n";
+						}
+					}
+				}
+			}
+			
+			
+		}
+		
+		return out;
+	}
+	
+	/**
+	 * Adds student to course
+	 */
+	public void addStudentToCourse(String studentName, String courseName, int courseNum) {
+		Course course = searchCat(courseName, courseNum);
+		Student stud = new Student(studentName, (int)(Math.random() * 100));
+		Registration reg = new Registration();
+		reg.setTheStudent(stud);
+		reg.setTheOffering(course.getCourseOfferingAt(0));
+		
+		course.getCourseOfferingAt(0).addRegistration(reg);
+	}
+	
+	/**
+	 * Removes student from course
+	 */
+	public void removeStudentFromCourse(String studentName, String courseName, int courseNum) {
+
+		Course course = searchCat(courseName, courseNum);
+
+		Registration reg = new Registration();
+		
 	}
 
 }
