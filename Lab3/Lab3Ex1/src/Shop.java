@@ -16,7 +16,10 @@ public class Shop {
 	
 	/**
 	 * The Supplier List, which keeps track of all shop Suppliers.
+	 * 
+	 * It is unused because it does not need to be used, as each item references its supplier directly.
 	 */
+	@SuppressWarnings("unused")
 	private SupplierList supplierList;
 	
 
@@ -30,6 +33,7 @@ public class Shop {
 		setInventory(inventory);
 		setSupplierList(supplierList);
 	}
+	
 	
 	/**
 	 * Sets the Inventory.
@@ -48,6 +52,60 @@ public class Shop {
 	 */
 	public void setSupplierList(SupplierList supplierList) {
 		this.supplierList = supplierList;
+	}
+
+	/**
+	 * Gets the current order, stored in the inventory.
+	 */
+	public Order getOrder() {
+		return inventory.getOrder();
+	}
+	
+	/**
+	 * Gets the item quantity, by name.
+	 */
+	public int getQuantity(String name) {
+		return inventory.getQuantity(name);
+	}
+
+	/**
+	 * Decreases an item quantity by name
+	 * 
+	 * @param itemName The name of the item to decrease the quantity of.
+	 * @return Whether quantity decrease was successful
+	 */
+	public boolean decreaseQuantity(String itemName) {
+		return inventory.decreaseQuantity(itemName);
+	}
+
+	/**
+	 * Gets an Item by its ID.
+	 * 
+	 * @param search The Item's ID
+	 * @return The Item
+	 */
+	public Item getItem(int id) {
+		return inventory.getItem(id);
+	}
+	
+	/**
+	 * Gets an Item by its name.
+	 * 
+	 * @param search The Item's name
+	 * @return The Item
+	 */
+	public Item getItem(String name) {
+		return inventory.getItem(name);
+	}
+
+	/**
+	 * Lists all the items in the shop's inventory by calling their toString methods.
+	 * @return 
+	 * 
+	 * @return String representation of all items in the shop
+	 */
+	public String listAllItems() {
+		return inventory.listAllItems();
 	}
 
 }

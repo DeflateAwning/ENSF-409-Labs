@@ -68,12 +68,16 @@ public class FileManager {
 					
 				}
 			}
+
+			// Close the Buffered Reader
+			br.close();
 		}
 		
 		catch (Exception e) {
-			System.err.println("Error loading the items.txt file:");
+			System.err.println("Error loading the items.txt file: ");
 			System.err.println(e.getMessage());
 		}
+		
 		
 		return items;
 		
@@ -87,6 +91,10 @@ public class FileManager {
 	 * @return Reference to the supplier object, or null if it is not found.
 	 */
 	public Supplier findSupplier(int supplierID) {
+		// Error check to make sure the Supplier List is initialized
+		if (suppliers.size() == 0) {
+			System.err.println("Suppliers not initialized, depite class to FileManager->findSupplier, causing failure.");
+		}
 		// Loop through each supplier, consider each one's ID
 		for (int supIndex = 0; supIndex < suppliers.size(); supIndex++) {
 			if (suppliers.get(supIndex).getID() == supplierID) {
@@ -99,12 +107,47 @@ public class FileManager {
 	}
 	
 	/**
-	 * Reads in all the suppliers in a suppliers.txt file
+	 * Reads in all the suppliers in a suppliers.txt file.
+	 * Components of each line: 0id, 1name, 2address, 3contact.
+	 * This method was adapted from the readItems() method.
 	 * 
 	 * @return An ArrayList of Suppliers, read from the file
+	 * @since Feb 16, 2020
 	 */
 	public ArrayList<Supplier> readSuppliers() {
-		return null;
+		// Init the suppliers as empty list
+		suppliers = new ArrayList<Supplier>();
+		
+		try {
+			FileReader fr = new FileReader(pathToSuppliersFile);
+			BufferedReader br = new BufferedReader(fr);
+			
+			String line = "";
+			
+			// Read a line, continue looping as long as it's not null
+			while ((line = br.readLine()) != null) {
+				// Split each line by the semicolon delimiter
+				String[] lineParts = line.split(";");
+
+				// Create a Supplier
+				Supplier thisSupplier = new Supplier(Integer.parseInt(lineParts[0]), lineParts[1], lineParts[2], lineParts[3]);
+				
+				// Add the newly created item to the item list
+				suppliers.add(thisSupplier);
+				
+			}
+			
+			// Close the Buffered Reader
+			br.close();
+			
+		}
+		
+		catch (Exception e) {
+			System.err.println("Error loading the suppliers.txt file: ");
+			System.err.println(e.getMessage());
+		}
+		
+		return suppliers;
 		
 	}
 

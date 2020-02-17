@@ -62,12 +62,21 @@ public class Supplier {
 	}
 	
 	/**
-	 * Gets the ID of a supplier
+	 * Gets the ID of a supplier.
 	 * 
-	 * @return The ID of the supplier
+	 * @return The ID of the supplier.
 	 */
 	public int getID() {
 		return id;
+	}
+
+	/**
+	 * Gets the Name of a supplier (i.e. its company name).
+	 * 
+	 * @return The Name of the supplier.
+	 */
+	public String getName() {
+		return company;
 	}
 	
 	/**
@@ -77,6 +86,25 @@ public class Supplier {
 	 */
 	public ArrayList<Item> getItemList() {
 		return itemList;
+	}
+	
+
+
+	/**
+	 * Converts all main elements of the supplier into a String representation.
+	 * 
+	 * @return String representation of the Supplier.
+	 */
+	@Override
+	public String toString() {
+		String out = "";
+		
+		out += "Supplier ID:" + id;
+		out += ", Supplier Company Name: " + company;
+		out += ", Supplier Address: " + address;
+		out += ", Supplier Contact Person: " + contact;
+		
+		return out;
 	}
 
 }

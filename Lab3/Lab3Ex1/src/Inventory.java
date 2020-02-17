@@ -13,6 +13,11 @@ public class Inventory {
 	 */
 	private ArrayList<Item> items;
 	
+	/**
+	 * The current order.
+	 */
+	private Order order;
+	
 	
 	/**
 	 * Inventory constructor, loads in an ArrayList of Items to form the inventory of the shop.
@@ -21,6 +26,9 @@ public class Inventory {
 	 */
 	public Inventory(ArrayList<Item> items) {
 		setItems(items);
+		
+		// Init an empty order
+		order = new Order();
 		
 	}
 
@@ -32,6 +40,100 @@ public class Inventory {
 	public void setItems(ArrayList<Item> items) {
 		this.items = items;
 	}
+	
+	/**
+	 * Manages an item by decreasing its quantity and seeing if an order must be placed.
+	 * Note that this implementation is better than the implementation in the video, as it employs better coherence (not requiring a decreaseItem function here).
+	 * 
+	 * @param name The name of the item to manage/decrease
+	 * @return The item being managed
+	 */
+	public Item manageItem(String name) {
+		Item item = searchForItem(name);
+		
+		if (item != null) {
+			// If the decrease is successful, place an order
+			if (decreaseQuantity(name)) {
+				placeOrder(item);
+			}
+		}
+		
+		return item;
+	}
+	
+	/**
+	 * Decreases an item quantity, by name.
+	 * 
+	 * @param name The name of the item to decrease the quantity of
+	 * @return Whether the decrease was successful (i.e. whether the quantity was !=0 before).
+	 */
+	public boolean decreaseQuantity(String name) {
+		Item item = searchForItem(name);
+		
+		if (item != null) {
+			return item.decreaseItemQuantity();
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * Places an order by generating an order line for a file, and adding the orderline if it's not null. Ignores if null.
+	 */
+	public void placeOrder(Item item) {
+		OrderLine orderLine = item.generateOrderLine();
+		
+		if (orderLine != null) {
+			order.addOrderLine(orderLine);
+		}
+	}
+	
+	/**
+	 * Gets an item by its name or ID.
+	 * 
+	 * @param name The item's name.
+	 * @return The Item object.
+	 */
+	public Item searchForItem(String name) {
+		for (int i = 0; i < items.size(); i++) {
+			if (items.get(i).getName() == name) {
+				return items.get(i);
+			}
+		}
+		return null;
+	}
+	
+
+	/**
+	 * Gets the item quantity, by name.
+	 */
+	public int getQuantity(String name) {
+		return searchForItem(name).getQuantity();
+	}
+
+	/**
+	 * Gets an item by its name or ID.
+	 * 
+	 * @param id The item's ID.
+	 * @return The Item object.
+	 */
+	public Item searchForItem(int id) {
+		for (int i = 0; i < items.size(); i++) {
+			if (items.get(i).getID() == id) {
+				return items.get(i);
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Gets the current order.
+	 * 
+	 * @return The current order.
+	 */
+	public Order getOrder() {
+		return order;
+	}
 
 	/**
 	 * Getter for the inventory's items
@@ -41,4 +143,41 @@ public class Inventory {
 	public ArrayList<Item> getItems() {
 		return items;
 	}
+	
+	/**
+	 * Gets an Item by its ID.
+	 * 
+	 * @param id The Item's ID
+	 * @return The Item
+	 */
+	public Item getItem(int id) {
+		return searchForItem(id);
+	}
+	
+	/**
+	 * Gets an Item by its name.
+	 * 
+	 * @param name The Item's name
+	 * @return The Item
+	 */
+	public Item getItem(String name) {
+		return searchForItem(name);
+	}
+	
+
+	/**
+	 * Lists all the items in this inventory.
+	 * 
+	 * @return String representation of all items in the inventory.
+	 */
+	public String listAllItems() {
+		String out = "";
+		
+		for (int i = 0; i < items.size(); i++) {
+			out += items.get(i);
+		}
+		
+		return out;
+	}
+
 }
