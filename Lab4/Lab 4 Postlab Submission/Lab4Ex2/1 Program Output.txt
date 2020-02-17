@@ -1,0 +1,96 @@
+
+Shape name: R1
+Origin: X-coordinate: 3.0
+Y-coordinate: 4.0
+Black point
+Width: 6.0
+Length: 5.0
+
+Shape name: C1
+Origin: X-coordinate: 13.0
+Y-coordinate: 14.0
+Green point
+Radius: 15.0
+
+Shape name: R2
+Origin: X-coordinate: 23.0
+Y-coordinate: 24.0
+Black point
+Width: 26.0
+Length: 25.0
+
+Shape name: C2
+Origin: X-coordinate: 33.0
+Y-coordinate: 34.0
+Yellow point
+Radius: 35.0
+
+Shape name: P1
+Origin: X-coordinate: 43.0
+Y-coordinate: 44.0
+White point
+Width: 46.0
+Length: 45.0
+Height: 47.0
+
+Shape name: P2
+Origin: X-coordinate: 53.0
+Y-coordinate: 54.0
+Gray point
+Width: 56.0
+Length: 55.0
+Height: 57.0
+
+Adding Rectangle, Circle, and Prism objects to the list... 
+
+Showing information about objects added to the list:
+
+Shape name: C1
+Origin: X-coordinate: 13.0
+Y-coordinate: 14.0
+Green point
+Radius: 15.0
+
+Shape name: C2
+Origin: X-coordinate: 33.0
+Y-coordinate: 34.0
+Yellow point
+Radius: 35.0
+
+Shape name: P1
+Origin: X-coordinate: 43.0
+Y-coordinate: 44.0
+White point
+Width: 46.0
+Length: 45.0
+Height: 47.0
+
+Shape name: P2
+Origin: X-coordinate: 53.0
+Y-coordinate: 54.0
+Gray point
+Width: 56.0
+Length: 55.0
+Height: 57.0
+
+Shape name: R1
+Origin: X-coordinate: 3.0
+Y-coordinate: 4.0
+Black point
+Width: 6.0
+Length: 5.0
+
+Shape name: R2
+Origin: X-coordinate: 23.0
+Y-coordinate: 24.0
+Black point
+Width: 26.0
+Length: 25.0
+
+Showing area, perimeter, and volume of objects in the list:
+The area, perimeter, and volume of C1 are: 706.86, 94.25, 0.00.
+The area, perimeter, and volume of C2 are: 3848.45, 219.91, 0.00.
+The area, perimeter, and volume of P1 are: 12694.00, 182.00, 97290.00.
+The area, perimeter, and volume of P2 are: 18814.00, 222.00, 175560.00.
+The area, perimeter, and volume of R1 are: 30.00, 22.00, 0.00.
+The area, perimeter, and volume of R2 are: 650.00, 102.00, 0.00.
