@@ -41,6 +41,7 @@ public class Geometry{
 	private void add(Shape shape) {
 		// TODO Make this method work
 		shapes.add(shape);
+		
 	}
 	
 	/**
