@@ -1,35 +1,36 @@
 
+
 import java.io.*;
 
-/*
+/**
  * Creates one of two players in the game, who play the Game. Each player plays against a single opponent Player on a single Game/Board.
  * 
  * @author Parker Link
  * @version 2.0.0
  * @since Feb. 5, 2020
  */
-public class Player implements Constants{
-	/*
+public class Player implements Constants {
+	/**
 	 * The name of the player
 	 */
 	private String name;
 	
-	/*
+	/**
 	 * The board on which the game is played
 	 */
 	private Board board;
 	
-	/*
+	/**
 	 * A reference to the opponent player
 	 */
 	private Player opponent;
 	
-	/*
+	/**
 	 * Storage of the mark that this player makes
 	 */
 	private char mark;
 	
-	/*
+	/**
 	 * Creates a new player, with a given name and given mark. This player is then able to play the game.
 	 * 
 	 * @param name The name of this player
@@ -39,8 +40,13 @@ public class Player implements Constants{
 		this.name = name;
 		this.mark = mark;
 	}
+
+	/**
+	 * Prompts the user to make a move in the game, or has the computer make a move.
+	 */
+	abstract public void makeMove() throws IOException
 	
-	/* 
+	/**
 	 * Make a play, if no one has won yet, and the board is not yet full. This calls makeMove(), and displays the board.
 	 * 
 	 */
@@ -95,9 +101,6 @@ public class Player implements Constants{
 		
 	}
 	
-	/*
-	 * Prompts the user to make a move in the game, asking for the row and column. This method would be better as private.
-	 */
 	public void makeMove() throws IOException {
 		int moveCol = -1, moveRow = -1;
 		BufferedReader stdin;
@@ -121,11 +124,9 @@ public class Player implements Constants{
 		
 		// Add the mark to that row/column location
 		board.addMark(moveRow, moveCol, mark);
-		
-		
 	}
 	
-	/*
+	/**
 	 * Set an opponent to play against.
 	 * 
 	 * @param opponent The Player to set as an opponent to play against
@@ -134,7 +135,7 @@ public class Player implements Constants{
 		this.opponent = opponent;
 	}
 	
-	/*
+	/**
 	 * Set the board to play on.
 	 * 
 	 * @param board The Board to set as the board to play on
@@ -143,7 +144,7 @@ public class Player implements Constants{
 		this.board = board;
 	}
 	
-	/*
+	/**
 	 * Gets the name of this player.
 	 * 
 	 * @returns The name of the player
