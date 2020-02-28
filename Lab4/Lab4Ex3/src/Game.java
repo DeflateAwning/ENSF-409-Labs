@@ -10,9 +10,6 @@ import java.io.*;
  * @version 2.0.1
  * @since Feb. 5, 2020
  */
-
-import java.io.*;
-
 public class Game implements Constants {
 
 	private Board theBoard;

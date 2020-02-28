@@ -9,26 +9,26 @@ import java.io.*;
  * @version 2.0.0
  * @since Feb. 5, 2020
  */
-public class Player implements Constants {
+abstract public class Player implements Constants {
 	/**
 	 * The name of the player
 	 */
-	private String name;
+	protected String name;
 	
 	/**
 	 * The board on which the game is played
 	 */
-	private Board board;
+	protected Board board;
 	
 	/**
 	 * A reference to the opponent player
 	 */
-	private Player opponent;
+	protected Player opponent;
 	
 	/**
 	 * Storage of the mark that this player makes
 	 */
-	private char mark;
+	protected char mark;
 	
 	/**
 	 * Creates a new player, with a given name and given mark. This player is then able to play the game.
@@ -44,7 +44,7 @@ public class Player implements Constants {
 	/**
 	 * Prompts the user to make a move in the game, or has the computer make a move.
 	 */
-	abstract public void makeMove() throws IOException
+	abstract protected void makeMove() throws IOException;
 	
 	/**
 	 * Make a play, if no one has won yet, and the board is not yet full. This calls makeMove(), and displays the board.
@@ -101,30 +101,6 @@ public class Player implements Constants {
 		
 	}
 	
-	public void makeMove() throws IOException {
-		int moveCol = -1, moveRow = -1;
-		BufferedReader stdin;
-		
-		do {
-			// Check for previous input error
-			if (moveCol != -1 || moveRow != -1) {
-				System.out.println("Please try entering a row and column again, as an invalid move was just made.");
-			}
-			
-			// Init input buffer
-			stdin = new BufferedReader(new InputStreamReader(System.in));
-			
-			// Read the Row/Column to make the move in
-			System.out.print(name + ", enter the row to place \'" + mark + "\' mark in: ");
-			moveRow = Integer.parseInt(stdin.readLine());
-			System.out.print(name + ", enter the column to place \'" + mark + "\' mark in: ");
-			moveCol = Integer.parseInt(stdin.readLine());
-		} while (board.getMark(moveRow, moveCol) != SPACE_CHAR);
-		
-		
-		// Add the mark to that row/column location
-		board.addMark(moveRow, moveCol, mark);
-	}
 	
 	/**
 	 * Set an opponent to play against.
@@ -151,6 +127,15 @@ public class Player implements Constants {
 	 */
 	public String getName() {
 		return name;
+	}
+	
+	/**
+	 * Gets the mark of this player.
+	 * 
+	 * @returns The mark of the player
+	 */
+	public char getMark() {
+		return mark;
 	}
 
 }
