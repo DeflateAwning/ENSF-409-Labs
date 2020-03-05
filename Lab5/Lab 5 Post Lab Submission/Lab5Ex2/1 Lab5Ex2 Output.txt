@@ -1,0 +1,98 @@
+Name: Parker Link
+UCID: 30045201
+
+
+Here are the original values in r1:
+
+Shape name: R1
+Origin: X-coordinate: 3.0
+Y-coordinate: 4.0
+Black point
+Width: 6.0
+Length: 5.0
+
+Here are the original values in c1:
+
+Shape name: C1
+Origin: X-coordinate: 13.0
+Y-coordinate: 14.0
+Green point
+Radius: 15.0
+
+Here are the original values in r2:
+
+Shape name: R2
+Origin: X-coordinate: 23.0
+Y-coordinate: 24.0
+Black point
+Width: 26.0
+Length: 25.0
+Here are the original values in c2:
+
+Shape name: C2
+Origin: X-coordinate: 33.0
+Y-coordinate: 34.0
+Yellow point
+Radius: 35.0
+
+Here are the original values in p1:
+
+Shape name: P1
+Origin: X-coordinate: 43.0
+Y-coordinate: 44.0
+White point
+Width: 46.0
+Length: 45.0
+Height: 47.0
+
+Here are the original values in p2:
+
+Shape name: P2
+Origin: X-coordinate: 53.0
+Y-coordinate: 54.0
+Gray point
+Width: 56.0
+Length: 55.0
+Height: 57.0
+Size Factor provided was not valid. Ensure the size factor is less than Resizable.LIMIT.
+
+Here are values for r1 after calling enlarge(2.0):
+
+Shape name: R1
+Origin: X-coordinate: 3.0
+Y-coordinate: 4.0
+Black point
+Width: 12.0
+Length: 10.0
+
+Here is the font size for r1.name after calling enlarge(3.0):
+30.0
+
+Here are values for c1 after calling shrink (2.0):
+
+Shape name: C1
+Origin: X-coordinate: 13.0
+Y-coordinate: 14.0
+Green point
+Radius: 7.5
+
+Here are values for p1 after calling shrink (0.5):
+
+Shape name: P1
+Origin: X-coordinate: 43.0
+Y-coordinate: 44.0
+White point
+Width: 46.0
+Length: 45.0
+Height: 47.0
+Size Factor provided was not valid. Ensure the size factor is less than Resizable.LIMIT.
+
+Here are values for p1 after calling shrink (0.5) -- UNCHANGED:
+
+Shape name: P1
+Origin: X-coordinate: 43.0
+Y-coordinate: 44.0
+White point
+Width: 46.0
+Length: 45.0
+Height: 47.0
