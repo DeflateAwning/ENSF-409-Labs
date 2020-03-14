@@ -1,14 +1,15 @@
 
-public class SimpleThread extends Thread{
+//public class SimpleThread extends Thread {
+public class SimpleThread implements Runnable {
 
 	Resource resource;
 	
 	public void run() {
-		for(int i = 0; i<10; i++){
+		for (int i = 0; i<10; i++){
 			try {
 			System.out.println(resource.increment());
 			
-			Thread.sleep(1);
+			Thread.sleep(10); // increased from 1 to 10 to cause the failure more often (for testing)
 			
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -17,7 +18,7 @@ public class SimpleThread extends Thread{
 	}
 	
 	
-	SimpleThread(Resource resource){
+	SimpleThread(Resource resource) {
 		this.resource = resource;
 	}
 
