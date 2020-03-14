@@ -1,3 +1,4 @@
+package ex3;
 
 class Product {
 
