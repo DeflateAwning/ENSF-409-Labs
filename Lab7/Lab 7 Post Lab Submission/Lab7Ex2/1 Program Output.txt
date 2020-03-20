@@ -1,0 +1,11 @@
+Name: Parker Link
+UCID: 30045201
+
+Task 1:
+Sum of 5 generated random numbers: 291
+
+Task 2:
+Sum of 5 generated random numbers: 274
+
+Task 3:
+Sum of 5 generated random numbers: 288

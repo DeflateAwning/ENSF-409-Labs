@@ -1,20 +1,18 @@
 import java.util.Random;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-// RandomThread.java -> Task 3
+// RandomThread.java -> Task 2
 
 /*
  * Program Output:
- * Sum of 5 generated random numbers: 288
+ * Sum of 5 generated random numbers: 274
  */
 
 /**
- * Implements a single runnable thread, for Task 3.
+ * Implements a single runnable thread, for Task 2.
  * 
  * @author Parker Link
  * @since Mar. 20, 2020
- * @version 3.0.0
+ * @version 2.0.0
  *
  */
 public class RandomThread implements Runnable {
@@ -80,17 +78,21 @@ public class RandomThread implements Runnable {
 	
 	public static void main(String[] args) {
 		RandomCollection myRandomCollection = new RandomCollection();
-		
-		final ExecutorService pool = Executors.newFixedThreadPool(5);
+		RandomThread myRandomThread = new RandomThread(myRandomCollection);
 		
 		for (int i = 0; i < 5; i++) {
+			Thread thisThread = new Thread(myRandomThread);
 			
-			pool.execute(new RandomThread(myRandomCollection));
-
+			thisThread.start();
+			
+			// Wait for this thread to complete before moving on
+			try {
+				thisThread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
 		}
-		
-		pool.shutdown();
 		
 		System.out.println("Sum of 5 generated random numbers: " + myRandomCollection.calcSum());
 
