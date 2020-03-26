@@ -31,3 +31,9 @@ Personal ENSF 409 (Software Development Principles) Lab Exercises, Winter 2020, 
 ### Lab 7
 * Java Generics/Generic Methods
 * Multithreading and Java Threads
+* Thread Pools/Concurrency
+
+### Lab 8
+* Client/Server Relationships, Sockets
+* Object Serialization
+* Concurrency Using Thread Pools, esp. in Client/Server Applications
