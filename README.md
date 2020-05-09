@@ -37,3 +37,12 @@ Personal ENSF 409 (Software Development Principles) Lab Exercises, Winter 2020, 
 * Client/Server Relationships, Sockets
 * Object Serialization
 * Concurrency Using Thread Pools, esp. in Client/Server Applications
+
+### Final Project
+* The final project involved developing a university Java course registration client/server system.
+* Available at: https://github.com/William-Ledingham/ENSF409_FinalProject
+* Communication on a 3-Person Team
+* Advanced git/Github usage, including:
+ * Pull Requests
+ * Imperative-Tense Commit Messages
+* Develop a MySQL-based data storage system
