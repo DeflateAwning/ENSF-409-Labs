@@ -43,6 +43,6 @@ Personal ENSF 409 (Software Development Principles) Lab Exercises, Winter 2020, 
 * Available at: https://github.com/William-Ledingham/ENSF409_FinalProject
 * Communication on a 3-Person Team
 * Advanced git/Github usage, including:
- * Pull Requests
- * Imperative-Tense Commit Messages
+    * Pull Requests
+    * Imperative-Tense Commit Messages
 * Develop a MySQL-based data storage system
